@@ -1,0 +1,31 @@
+12:29:54 **** Auto Build of configuration Debug for project test_my_mult ****
+make all 
+Building file: ../src/test_multiplier.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test_multiplier.o" -I../../test_my_mult_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/test_multiplier.d" -MT"src/test_multiplier.d" -o "src/test_multiplier.o" "../src/test_multiplier.c"
+../src/test_multiplier.c: In function 'main':
+../src/test_multiplier.c:26:3: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+   print("multiplier IP test begin.\r\n");
+   ^
+../src/test_multiplier.c:14:6: warning: unused variable 'producto' [-Wunused-variable]
+  u32 producto;
+      ^
+../src/test_multiplier.c:13:6: warning: unused variable 'operandos' [-Wunused-variable]
+  u32 operandos = 0x00020003;
+      ^
+Finished building: ../src/test_multiplier.c
+ 
+Building target: test_my_mult.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../test_my_mult_bsp/ps7_cortexa9_0/lib -o "test_my_mult.elf"  ./src/test_multiplier.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: test_my_mult.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size test_my_mult.elf  |tee "test_my_mult.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19604	   1152	  22564	  43320	   a938	test_my_mult.elf
+Finished building: test_my_mult.elf.size
+ 
+
+12:29:54 Build Finished (took 367ms)
+

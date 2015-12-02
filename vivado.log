@@ -1,0 +1,122 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Nov  4 12:42:04 2015
+# Process ID: 28878
+# Log file: /home/rcampos/co-diseno/vivado.log
+# Journal file: /home/rcampos/co-diseno/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.xpr
+INFO: [Project 1-313] Project file moved from '/home/rcampos/co-diseno/hello_world_3-base-for-mult' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 5784.039 ; gain = 89.148 ; free physical = 2454 ; free virtual = 14248
+open_bd_design {/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- user.org:user:my_multiplier:1.0 - my_multiplier_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_49M
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <design_1> from BD file </home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd>
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M00_AXI] [get_bd_cells my_multiplier_0]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_nets rst_processing_system7_0_49M_interconnect_aresetn] [get_bd_cells rst_processing_system7_0_49M]
+delete_bd_objs [get_bd_nets rst_processing_system7_0_49M_peripheral_aresetn] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_cells processing_system7_0_axi_periph]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property  ip_repo_paths  {/home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0 /home/rcampos/co-diseno/labo6_try2/solution1/impl} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rcampos/co-diseno/labo6_try2/solution1/impl'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_bd_design {/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:mul:1.0 mul_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins mul_0/s_axi_AXILiteS]
+INFO: [Ipptcl 7-578] No Compatible Board Interface found.Board Tab not created
+</mul_0/s_axi_AXILiteS/Reg> is being mapped into </processing_system7_0/Data> at <0x43C00000[ 64K ]>
+open_bd_design {/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd}
+make_wrapper -files [get_files /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd] -top
+Verilog Output written to : /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1.v
+Verilog Output written to : /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Wrote  : </home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1.v
+Verilog Output written to : /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Wrote  : </home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_processing_system7_0_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_mul_0_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mul_0 .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_rst_processing_system7_0_100M_0'...
+WARNING: [IP_Flow 19-1687] The current project language is set to Verilog. However IP 'design_1_rst_processing_system7_0_100M_0' does not support 'Verilog Synthesis' output products, delivering 'VHDL Synthesis' output products instead.
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'design_1_rst_processing_system7_0_100M_0'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'design_1_auto_pc_1'...
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1379] This design does not contain any processor.
+Exporting to file /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1.v
+Verilog Output written to : /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Wrote  : </home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'design_1_processing_system7_0_1'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'design_1_mul_0_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mul_0 .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'design_1_rst_processing_system7_0_100M_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'design_1_rst_processing_system7_0_100M_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'design_1_rst_processing_system7_0_100M_0'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'design_1_auto_pc_1'. Target already exists and is up to date.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1379] This design does not contain any processor.
+Exporting to file /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.srcs/sources_1/bd/design_1/hdl/design_1.hwdef
+[Wed Nov  4 12:47:33 2015] Launched synth_1...
+Run output will be captured here: /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.runs/synth_1/runme.log
+[Wed Nov  4 12:47:33 2015] Launched impl_1...
+Run output will be captured here: /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 5989.605 ; gain = 23.906 ; free physical = 2170 ; free virtual = 13983
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Nov  4 12:49:23 2015] Launched impl_1...
+Run output will be captured here: /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/rcampos/co-diseno/.Xil/Vivado-28878-ws8.labo3/dcp/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/home/rcampos/co-diseno/.Xil/Vivado-28878-ws8.labo3/dcp/design_1_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00,23 ; elapsed = 00:00:00,40 . Memory (MB): peak = 6178.961 ; gain = 2.000 ; free physical = 2015 ; free virtual = 13848
+Restored from archive | CPU: 0,230000 secs | Memory: 1,224472 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00,23 ; elapsed = 00:00:00,40 . Memory (MB): peak = 6178.961 ; gain = 2.000 ; free physical = 2015 ; free virtual = 13848
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 6292.488 ; gain = 281.863 ; free physical = 1910 ; free virtual = 13741
+file copy -force /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.runs/impl_1/design_1_wrapper.sysdef /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 13:03:21 2015...

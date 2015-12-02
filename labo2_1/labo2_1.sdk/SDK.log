@@ -1,0 +1,20 @@
+12:12:34 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo2_1/labo2_1.sdk/design_1_wrapper.hdf.
+12:12:36 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:12:38 INFO  : XSDB server has started successfully.
+12:21:19 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:21:20 INFO  : XSDB server has started successfully.
+12:21:22 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo2_1/labo2_1.sdk/design_1_wrapper.hdf.
+12:21:23 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+12:21:23 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1441811992000,  Project:1441811543000
+12:21:23 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/rcampos/co-diseno/labo2_1/labo2_1.sdk/design_1_wrapper.hdf.
+12:21:23 INFO  : Copied contents of /home/rcampos/co-diseno/labo2_1/labo2_1.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+12:21:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:21:27 INFO  : Clearing existing target manager status.
+12:21:28 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:21:28 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:22:44 INFO  : BSP Project P/standalone_bsp_0 has been successfully migrated.
+13:02:57 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:24:12 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:24:13 INFO  : XSDB server has started successfully.
+12:24:14 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo2_1/labo2_1.sdk/design_1_wrapper.hdf.
+12:24:15 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
